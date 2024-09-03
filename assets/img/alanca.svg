@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Capa_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 399.22 212.19">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: #fff;
+      }
+
+      .cls-3 {
+        letter-spacing: -.14em;
+      }
+
+      .cls-4 {
+        letter-spacing: .05em;
+      }
+
+      .cls-5 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-6 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-7 {
+        letter-spacing: .04em;
+      }
+
+      .cls-2 {
+        font-family: MagicalChildhood-Italic, 'Magical Childhood';
+        font-size: 56.9px;
+        font-style: italic;
+      }
+    </style>
+  </defs>
+  <g id="Capa_1-2" data-name="Capa_1">
+    <g>
+      <text class="cls-2" transform="translate(0 183.74)"><tspan class="cls-6" x="0" y="0">A</tspan><tspan class="cls-5" x="69.86" y="0">L</tspan><tspan class="cls-6" x="125.39" y="0">A</tspan><tspan class="cls-7" x="195.25" y="0">N</tspan><tspan class="cls-3" x="261.51" y="0">C</tspan><tspan class="cls-4" x="328.09" y="0">A</tspan></text>
+      <g>
+        <polygon class="cls-1" points="101.51 81.7 144.28 81.7 224.69 0 181.92 0 101.51 81.7"/>
+        <polygon class="cls-1" points="297.71 81.7 254.95 81.7 233.96 59.61 211.72 81.7 168.95 81.7 251.18 .06 293.94 .06 255.48 38.26 297.71 81.7"/>
+      </g>
+    </g>
+  </g>
+</svg>
