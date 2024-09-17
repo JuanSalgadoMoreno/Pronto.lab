@@ -38,6 +38,7 @@
    ================================================== -->
   <script src="js/modernizr.js"></script>
   <script src="js/pace.min.js"></script>
+
   <!-- Libreria AOS
    ================================================== -->
 
@@ -45,48 +46,35 @@
 
 
 </head>
-
 <body>
   <header id="header" class="row">
-    <nav class="navbar navbar-expand-lg navbar-dark">
-      <div class="container px-5">
+    <nav class="navbar navbar-expand-lg nav">
+      <div class="container-fluid px-5">
         <a class="navbar-brand" href="index.html"><img src="assets/favicon.svg" alt=""></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span
-            class="navbar-toggler-icon"></span></button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+          aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span
+            class="navbar-toggler-icon"></span>
+          </button>
+
+        <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="#about-us">Nosotros</a></li>
+            <li class="nav-item"><a class="nav-link" href="#hero">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#about">Nosotros</a></li>
             <li class="nav-item"><a class="nav-link" href="#details">Servicios</a></li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" id="navbarDropdownBlog" href="#" role="button"
-                data-bs-toggle="dropdown" aria-expanded="false">Blog</a>
-              <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownBlog">
-                <li><a class="dropdown-item" href="blog-home.html">Blog Home</a></li>
-                <li><a class="dropdown-item" href="blog-post.html">Blog Post</a></li>
-              </ul>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" id="navbarDropdownPortfolio" href="#" role="button"
-                data-bs-toggle="dropdown" aria-expanded="false">Portfolio</a>
-              <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownPortfolio">
-                <li><a class="dropdown-item" href="portfolio-overview.html">Portfolio Overview</a></li>
-                <li><a class="dropdown-item" href="portfolio-item.html">Portfolio Item</a></li>
-              </ul>
-            </li>
-          </ul>
+            <li class="nav-item"><a class="nav-link" href="#tools">Herramientas</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact">Contacto</a></li>
         </div>
       </div>
     </nav>
   </header>
   <main>
-    <section class="hero" data-parallax="scroll" data-image-src="assets/img/glow-bottom.svg">
-      <div class="container-lg" data-aos="fade-up">
+    <section id="hero" data-parallax="scroll" data-image-src="assets/img/glow-bottom.svg">
+      <div class="container" data-aos="fade-up">
         <!--Titulos centrados-->
         <div class="text-center">
           <h1 class="section-heading item-title">Diseño y Desarrollo de Páginas Web</h1>
-          <p class="section-subheading item-parrafo">Ofrece tus servicios, Genera clientes y aumenta tus ganancias</p >
+          <p class="section-subheading item-parrafo">Ofrece tus servicios, Genera clientes y aumenta tus ganancias</p>
         </div>    
 
         <!--buton primario-->
@@ -100,8 +88,11 @@
           </div>
         </div>
         <!--fin boton primario-->
-
       </div>
+       <!-- Botón de WhatsApp -->
+          <a href="https://wa.me/+351932902300" target="_blank" class="whatsapp-button">
+            <i class="bi bi-whatsapp whatsapp-icon"></i>
+        </a>
     </section>
     <div class="marquee">
       <ul class="marquee-content">
@@ -115,16 +106,16 @@
       </ul>
     </div>
     <!--about us-->
-    <section id="about" class="about">
-      <div class="container-lg px-5 my-5">
+    <section id="about">
+      <div class="container-fluid px-5 my-5">
         <div class="row gx-5 align-items-center">
           <div class="col-lg-5 order-first order-lg-last">
             <div class="container-cirle" data-aos="fade-up">
               <div class="item-cicle">
                 <div class="circle"></div>
               </div>
-              <div class="item-logo kenburns-top">
-                <img src="assets/img/Background+Shadow.svg" alt="">
+              <div class="item-logo">
+                <a href="#contact"><img src="assets/img/Background+Shadow.svg" alt="logotipo-pronto"></a>
               </div>
             </div>
           </div>
@@ -137,8 +128,9 @@
         </div>
       </div>
       <!--servicios grid-->
+      
 
-      <div class="container-lg container-cards px-5 my-5" id="servicios-grid">
+      <div class="container-grid container-cards px-5 my-5" id="servicios-grid">
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 py-5" data-aos="fade-up">
           <div class="col d-flex align-items-start">
             <i class="bi bi-fast-forward-fill flex-shrink-0 me-3 icon-grid-servicios"></i>
@@ -178,18 +170,19 @@
     </section>
     <!--fin servicios-->
     <!--inicio detalle servicios-->
-    <section id="details" class="detalles container-fluid">
-      <div class="container-lg" data-aos="zoom-out-down">
+    <section id="details" class="detalles">
+      <div class="container">
 <!--Titulos centrados-->
-<div class="text-center container-title">
-  <h2 class="section-heading item-title">Explora Nuestro Universo</h2>
-  <p class="section-subheading item-parrafo">Servicios de Diseño y Desarrollo Web</p>
+
+<div class="container-title">
+  <h2 class="item-title"  data-aos="zoom-out-down">Explora Nuestro Universo</h2>
+  <p class="item-parrafo"  data-aos="zoom-out-down">Servicios de Diseño y Desarrollo Web</p>
 </div>
 
       <!--detalle grid-->
-      <div class="container-lg container-grid">
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4" data-aos="fade-up">
-          <div class="col">
+      <div class="container-fluid container-grid ">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4">
+          <div class="col" data-aos="fade-up">
             <div class="container shadow-sm">
 
               <div class="box card-detalle">
@@ -205,7 +198,7 @@
               </div>
             </div>
           </div>
-          <div class="col">
+          <div class="col" data-aos="fade-up">
             <div class="container shadow-sm">
 
               <div class="box card-detalle">
@@ -221,7 +214,7 @@
               </div>
             </div>
           </div>
-          <div class="col">
+          <div class="col" data-aos="fade-up">
             <div class="container shadow-sm">
 
               <div class="box card-detalle">
@@ -238,7 +231,7 @@
             </div>
           </div>
 
-          <div class="col">
+          <div class="col" data-aos="fade-up">
             <div class="container shadow-sm">
 
               <div class="box card-detalle">
@@ -256,15 +249,15 @@
             <!--fin detalle grid-->
     </section>
     <!--fin detalle servicios-->
-    <section class="experience">
+    <section class="experience" id="tools">
       <!--prueba section-->
-      <div class="container px-5 my-5">
+      <div class="container-fluid px-5 my-5">
         <div class="row gx-5 align-items-start">
           <div class="col-lg-6 order-first order-lg-last"></div>
-          <div class="col-lg-6" data-aos="zoom-out-right">
-            <h2 class="sub-title-2 lh-1 mb-3">Tecnología de Otro <span
-                class="sub-title-span">Mundo</span></h2>
-            <p class="lead fw-normal mb-1 item-parrafo">En <strong>Pronto.lab</strong> utilizamos una variedad de herramientas y
+          <div class="col-lg-6">
+            <h2 class="sub-title-2 lh-1 mb-3" data-aos="zoom-out-right">Tecnología de Otro <span
+                class="sub-title-span" data-aos="zoom-out-right">Mundo</span></h2>
+            <p class="lead fw-normal mb-1 item-parrafo" data-aos="zoom-out-right">En <strong>Pronto.lab</strong> utilizamos una variedad de herramientas y
               tecnologías de vanguardia para garantizar que cada página web que desarrollamos sea funcional, segura y
               visualmente impactante. Nuestro equipo selecciona cuidadosamente cada herramienta para adaptarse a las
               necesidades específicas de tu proyecto, asegurando un desarrollo ágil y eficiente que cumpla con los más
@@ -272,6 +265,7 @@
             <div class="d-grid gap-2 d-md-flex justify-content-md-start">
               <div class="container-btn-primary">
                 <div class="item-btn-secundary">
+                  <!--Boton secundario-->
                   <button class="button-secundario">
                     <span class="button-content">
                       Pruebalo tu mismo
@@ -289,11 +283,11 @@
   </main>
   <!-- Contact-->
   <section class="page-section" id="contact">
-    <div class="container-lg" data-aos="fade-up">
+    <div class="container">
       <!--titulos centrados-->
-      <div class="text-center container-title container-grid">
-        <h2 class="section-heading item-title">Explora Nuevas <span class="sub-title-span"> Oportunidades</span></h2>
-        <p class="section-subheading item-parrafo">Ponte en contacto con nosotros y empecemos a crear juntos.</p>
+      <div class="text-center container-title">
+        <h2 class="section-heading item-title"  data-aos="fade-up">Explora Nuevas <span class="sub-title-span"> Oportunidades</span></h2>
+        <p class="section-subheading item-parrafo"  data-aos="fade-up">Ponte en contacto con nosotros y empecemos a crear juntos.</p>
       </div>
       <!-- * * * * * * * * * * * * * * *-->
       <!-- * * SB Forms Contact Form * *-->
@@ -302,66 +296,39 @@
       <!-- To make this form functional, sign up at-->
       <!-- https://startbootstrap.com/solution/contact-forms-->
       <!-- to get an API token!-->
-      <form id="contactForm" data-sb-form-api-token="API_TOKEN">
-        <div class="row align-items-stretch mb-5">
-          <div class="col-md-6">
-            <div class="form-group">
-              <!-- Name input-->
-              <input class="form-control" id="name" type="text" placeholder="Your Name *"
-                data-sb-validations="required" />
-              <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
-            </div>
-            <div class="form-group">
-              <!-- Email address input-->
-              <input class="form-control" id="email" type="email" placeholder="Your Email *"
-                data-sb-validations="required,email" />
-              <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
-              <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
-            </div>
-            <div class="form-group mb-md-0">
-              <!-- Phone number input-->
-              <input class="form-control" id="phone" type="tel" placeholder="Your Phone *"
-                data-sb-validations="required" />
-              <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>
-            </div>
+    
+    <!--formulario prueba-->
+    <div class="container">
+      <div class="login-box">
+        <form>
+          <div class="user-box">
+            <input type="text" id="name" required="">
+            <label>Tu Nombre</label>
           </div>
-          <div class="col-md-6">
-            <div class="form-group form-group-textarea mb-md-0">
-              <!-- Message input-->
-              <textarea class="form-control" id="message" placeholder="Your Message *"
-                data-sb-validations="required"></textarea>
-              <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
-            </div>
+          <div class="user-box">
+            <input type="email" id="email" required="">
+            <label>Tu Email</label>
           </div>
-        </div>
-        <!-- Submit success message-->
-        <!---->
-        <!-- This is what your users will see when the form-->
-        <!-- has successfully submitted-->
-        <div class="d-none" id="submitSuccessMessage">
-          <div class="text-center text-white mb-3">
-            <div class="fw-bolder">Form submission successful!</div>
-            To activate this form, sign up at
-            <br />
-            <a
-              href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
+          <div class="user-box">
+            <input type="tel" id="phone" required="">
+            <label>Tu Telefono</label>
           </div>
+        </form>
+        <div class="container-btn-primary">
+          <button class="button-secundario">
+            <span class="button-content">
+              Enviar Mensaje
+            </span>
+          </button>
         </div>
-        <!-- Submit error message-->
-        <!---->
-        <!-- This is what your users will see when there is-->
-        <!-- an error submitting the form-->
-        <div class="d-none" id="submitErrorMessage">
-          <div class="text-center text-danger mb-3">Error sending message!</div>
-        </div>
-        <!-- Submit Button-->
-        <div class="text-center"><button class="btn btn-primary btn-xl text-uppercase disabled" id="submitButton"
-            type="submit">Enviar mensaje</button></div>
-      </form>
+        
+      </div>
     </div>
+    <!--fin formulario prueba-->
+
   </section>
-  <!--footer-->
-  <div class="container-fluid">
+   <!--footer-->
+  <div class="container">
     <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
       <p class="col-md-4 mb-0 item-parrafo">&copy; 2024 Company, Inc</p>
 
@@ -375,7 +342,7 @@
         <li class="nav-item"><a href="#" class="nav-link px-2 text-white-50">Features</a></li>
         <li class="nav-item"><a href="#" class="nav-link px-2 text-white-50">Pricing</a></li>
         <li class="nav-item"><a href="#" class="nav-link px-2 text-white-50">FAQs</a></li>
-        <li class="nav-item"><a href="#" class="nav-link px-2 text-white-50">About</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-white-50">hacemos</a></li>
       </ul>
     </footer>
   </div>

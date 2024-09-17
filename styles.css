@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
 }
 
 
@@ -11,27 +12,46 @@ body {
   padding: 0;
   background: rgb(2, 0, 36);
   background: linear-gradient(302deg, rgba(30, 41, 59, 1) 0%, rgb(15, 23, 42) 26%, rgba(15, 23, 42, 1) 100%);
+  overflow-x: hidden;
 }
 
 
 header {
   background-color: transparent;
-  padding: 20px;
+  padding: 10px;
+  
 }
 
 nav ul {
   display: flex;
   justify-content: center;
+  align-items: center;
   list-style-type: none;
   gap: 1.5rem;
 }
 
 nav a {
-  color: #CBD5E1;
+  color: #FFFFFF;
   text-decoration: none;
 }
 
-.hero {
+li .nav-link {
+  color: #ddd;
+}
+
+li .nav-link:active {
+  color: #B74DDB;
+  transform: scale(0.95);
+}
+li .nav-link:hover {
+  background: #A855F7;
+  background: linear-gradient(to right, #c89af2 40%, #E9D5FF 100%);
+  -webkit-background-clip: text;
+  background-clip: text;  -webkit-text-fill-color: transparent;
+  transition:1s;
+}
+
+#hero {
   background-image: url(assets/img/image-hero-background.png), url(assets/img/glow-bottom.svg);
   background-size: cover;
   background-position: center;
@@ -41,6 +61,29 @@ nav a {
   justify-content: center;
   align-items: center;
   text-align: center;
+}
+
+/* Estilos para el botón de WhatsApp */
+
+.whatsapp-button {
+  position: fixed;
+  bottom: 30px;   /* Distancia desde la parte inferior */
+  right: 30px;    /* Distancia desde la parte derecha */
+  z-index: 1000;  /* Asegura que el botón esté por encima de otros elementos */
+  font-size: 50px;  /* Tamaño del icono */
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;   /* Hace que el botón sea circular */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);  /* Sombra para que se vea más elevado */
+  transition: transform 0.3s;  /* Añade una animación suave al hacer hover */
+  color: rgb(37,211,102);
+}
+
+.whatsapp-button:hover {
+  transform: scale(1.1);  /* Efecto de zoom cuando pasas el ratón */
 }
 
 .item-parrafo {
@@ -53,8 +96,6 @@ nav a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 100px;
-  margin-bottom: 30px;
 }
 
 .item-title {
@@ -95,7 +136,10 @@ nav a {
   border: none;
   cursor: pointer;
   font-size: 14px;
-  box-shadow: 1px 1px 10px #ffffff3d;
+  border: 1px solid rgb(255, 255, 255);
+  box-shadow: 0 0 25px rgb(255, 255, 255),
+              0 0 25px rgb(255, 255, 255),
+              0 0 5px rgb(255, 255, 255) inset; 
 }
 
 .button:hover::before {
@@ -236,6 +280,13 @@ nav a {
   html {
     font-size: 12px;
   }
+  .item-title {
+    font-size: 40px;
+  }
+
+  .sub-title-span {
+    font-size: 40px ;
+  }
 
   :root {
     --marquee-width: 100vw;
@@ -253,10 +304,9 @@ nav a {
 
 
 .circle {
-  display: flex;
-  flex-direction: column;
-  height: 300px;
-  width: 300px;
+
+  height: 200px;
+  width: 200px;
   background-color: #A855F7;
   border-radius: 50%;
   margin: 50px;
@@ -314,75 +364,13 @@ nav a {
   
 }
 
-.case-studies {
+#about {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-}
-
-
-.hacemos {
-  background-color: #fff;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: #B74DDB;
-  text-align: center;
-}
-
-.process {
-  background-color: #d61111;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: #B74DDB;
-  text-align: center;
-}
-
-.loader {
-  border: 4px solid rgba(0, 0, 0, .1);
-  border-left-color: transparent;
-  border-radius: 50%;
-}
-
-.loader {
-  border: 4px solid rgba(0, 0, 0, .1);
-  border-left-color: transparent;
-  width: 36px;
-  height: 36px;
-}
-
-.loader {
-  border: 4px solid rgba(0, 0, 0, .1);
-  border-left-color: transparent;
-  width: 36px;
-  height: 36px;
-  animation: spin89345 1s linear infinite;
-}
-
-@keyframes spin89345 {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-.about {
-  display: flex;
   background-image: url(assets/img/image-hero-background.png);
   background-size: cover;
   background-position: center;
-  height:max-content;
-  flex-direction: column;
-  justify-content:flex-start;
+  justify-content: flex-start;
 }
 
 
@@ -436,7 +424,7 @@ hr {
 }
 
 
-.container::before {
+.container-cards::before {
   border-radius: 50%;
   width: 6rem;
   height: 6rem;
@@ -526,14 +514,11 @@ hr {
 }
 
 .detalles {
-  display: flex;
-  background-image: url(assets/img/image-hero-background.png), url(assets/img/glow-bottom-top.svg);
-  background-size: cover;
-  background-position: center;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+  height: 80vh;
+  background-image: url(assets/img/image-hero-background.png), url(assets/img/Frame.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top;
 }
 
 .container-subtitle {
@@ -545,15 +530,14 @@ hr {
 .container-grid {
 
   margin-top: 10vh;
-  margin-bottom: 10vh;
+  margin-bottom: 5vh;
 }
 .experience {
-
+  display: flex;
+  flex-direction: column;
   background-size: cover;
   background-position: center;
-  display: flex;
-  background: url(assets/img/background-cover-pronto.png) center center/contain no-repeat fixed;
-  flex-direction: column;
+  background: url(assets/img/background-cover-pronto.png) top center/cover;
   justify-content: center;
   align-items: center;
   margin-top: 20px;
@@ -592,43 +576,74 @@ hr {
   margin-top: 40px;
 }
 
-/*section contact*/
 
+/** 10. Tab --> Contact
+*******************************************************************/
 
-
-#contact {
-  background-color: transparent;
-  background-image: url("assets/img/Section-empower.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+.login-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px;
+  background: transparent;
+  box-sizing: border-box;
+  border-radius: 10px;
 }
-section#contact .section-heading {
+
+.login-box h2 {
+  margin: 0 0 30px;
+  padding: 0;
   color: #fff;
+  text-align: center;
 }
-section#contact form#contactForm .form-group {
-  margin-bottom: 1.5rem;
+
+.login-box .user-box {
+  position: relative;
 }
-section#contact form#contactForm .form-group input,
-section#contact form#contactForm .form-group textarea {
-  padding: 1.25rem;
+
+.login-box .user-box input {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  background: transparent;
 }
-section#contact form#contactForm .form-group input.form-control {
-  height: auto;
+.login-box .user-box label {
+  position: absolute;
+  top:0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  pointer-events: none;
+  transition: .5s;
 }
-section#contact form#contactForm .form-group-textarea {
-  height: 100%;
+
+.login-box .user-box input:focus ~ label,
+.login-box .user-box input:valid ~ label {
+  top: -20px;
+  left: 0;
+  color: #A855F7;
+  font-size: 12px;
 }
-section#contact form#contactForm .form-group-textarea textarea {
-  height: 100%;
-  min-height: 10rem;
+
+.login-box form a {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  color: #03e9f4;
+  font-size: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: .5s;
+  margin-top: 40px;
+  letter-spacing: 4px
 }
-section#contact form#contactForm p.help-block {
-  margin: 0;
-}
-section#contact form#contactForm .form-control:focus {
-  border-color: #A855F7;
-  box-shadow: none;
-}
+
 
 /*fii section contact*/
