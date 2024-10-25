@@ -1,8 +1,67 @@
+:root {
+  --font-family: "Inter", sans-serif;
+  --primary: #155bd5;
+  --primary-dark: #1c3ab6;
+  --primary-light: #e2f1ff;
+  --accent: #00d4d7;
+  --accent-dark: #00bac1;
+  --accent-light: #dff9f8;
+  --success: #13d527;
+  --success-dark: #00ae11;
+  --success-light: #eafbe7;
+  --secondary: #8f15d5;
+  --secondary-dark: #6013c7;
+  --secondary-light: #f4e5fa;
+  --info: #15b2d5;
+  --info-dark: #0f8ca8;
+  --info-light: #e0f5fa;
+  --caution: #dbbb25;
+  --caution-dark: #d58f15;
+  --caution-light: #fbf9e4;
+  --error: #e6185e;
+  --error-dark: #bf1257;
+  --error-light: #fce4eb;
+  --black: #1d1d1d;
+  --dark-1: #2d2d2d;
+  --dark-2: #4d4d4d;
+  --dark-3: #6d6d6d;
+  --gray-1: #8d8d8d;
+  --gray-2: #adadad;
+  --gray-3: #cdcdcd;
+  --gray-4: #e0e0e0;
+  --light-1: #efefef;
+  --light-2: #f5f5f5;
+  --light-3: #fafafa;
+  --white: #ffffff;
+  --gradient-1: linear-gradient(180deg, #155bd5 0%, #1c3ab6 100%);
+  --gradient-2: linear-gradient(180deg, #155bd5 13.02%, #00d4d7 85.42%);
+  --gradient-3: linear-gradient(180deg, #155bd5 0%, #8f15d5 100%);
+  --gradient-4: linear-gradient(180deg, #155bd5 0%, #13d527 100%);
+  --gradient-5: linear-gradient(180deg, #155bd5 0%, #15bbd5 100%);
+  --gradient-6: linear-gradient(180deg, #155bd5 0%, #dbbb25 100%);
+  --gradient-7: linear-gradient(180deg, #155bd5 0%, #e6185e 100%);
+  --gradient-8: linear-gradient(180deg, #1c3ab6 0%, #00bac1 100%);
+  --gradient-9: linear-gradient(180deg, #00d4d7 13.02%, #155bd5 85.42%);
+  --shadow-1: 0px 0px 1px rgba(40, 41, 61, 0.08),
+    0px 0.5px 2px rgba(96, 97, 112, 0.16);
+  --shadow-2: 0px 0px 1px rgba(40, 41, 61, 0.04),
+    0px 2px 4px rgba(96, 97, 112, 0.16);
+  --shadow-3: 0px 0px 2px rgba(40, 41, 61, 0.04),
+    0px 4px 8px rgba(96, 97, 112, 0.16);
+  --shadow-4: 0px 2px 4px rgba(40, 41, 61, 0.04),
+    0px 8px 16px rgba(96, 97, 112, 0.16);
+  --shadow-5: 0px 2px 8px rgba(40, 41, 61, 0.04),
+    0px 16px 24px rgba(96, 97, 112, 0.16);
+  --shadow-6: 0px 2px 8px rgba(40, 41, 61, 0.08),
+    0px 20px 32px rgba(96, 97, 112, 0.24);
+}
+
+
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-
 }
 
 
@@ -12,14 +71,13 @@ body {
   padding: 0;
   background: rgb(2, 0, 36);
   background: linear-gradient(302deg, rgba(30, 41, 59, 1) 0%, rgb(15, 23, 42) 26%, rgba(15, 23, 42, 1) 100%);
-  overflow-x: hidden;
 }
 
 
 header {
   background-color: transparent;
   padding: 10px;
-  
+
 }
 
 nav ul {
@@ -52,16 +110,16 @@ li .nav-link:hover {
 }
 
 #hero {
-  background-image: url(assets/img/image-hero-background.png), url(assets/img/glow-bottom.svg);
+  background-image: url(assets/img/image-hero-background.png);
+  height: 100vh; 
+  max-height: 100vh; 
+  overflow: hidden; 
   background-size: cover;
-  background-position: center;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+  background-attachment: fixed;
+  background-position: center; 
+  position: relative;
 }
+
 
 /* Estilos para el botón de WhatsApp */
 
@@ -114,57 +172,64 @@ li .nav-link:hover {
 
 /* Estilos para el botón primario */
 
-.container-btn-primary {
+.container-btn {
   display: flex;
-  flex-direction: row;
   justify-content: center;
-  align-items: center;
-  margin-top: 30px;
-  margin-bottom: 30px;
+  margin: 20px 0 0 0;
 }
 
-
-.button {
-  position: relative;
-  overflow: hidden;
-  height: 3rem;
-  padding: 0 2rem;
-  border-radius: 1.5rem;
-  background: #ffffffd3;
-  background-size: 400%;
-  color: #0F172A;
-  border: none;
+.btn-primary {
+  background: transparent;
+  font-size: 16px;
+  text-decoration: none;
   cursor: pointer;
-  font-size: 14px;
   border: 1px solid rgb(255, 255, 255);
-  box-shadow: 0 0 25px rgb(255, 255, 255),
-              0 0 25px rgb(255, 255, 255),
-              0 0 5px rgb(255, 255, 255) inset; 
+  border-radius: 100px;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 20px;
+  padding-right: 20px;
+
 }
 
-.button:hover::before {
-  transform: scaleX(1);
-}
 
-.button-content {
-  position: relative;
-  z-index: 1;
-}
-
-.button::before {
-  content: "";
+.btn-primary::before {
   position: absolute;
   top: 0;
   left: 0;
-  transform: scaleX(0);
-  transform-origin: 0 50%;
-  width: 100%;
-  height: inherit;
-  border-radius: inherit;
-  background: linear-gradient(82.3deg,
-      rgb(211, 182, 255) 10.8%,
-      rgb(183, 153, 254) 94.3%);
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  border-radius: 50%;
+  display: block;
+  width: 20em;
+  height: 20em;
+  left: -5em;
+  text-align: center;
+  transition: box-shadow 0.5s ease-out;
+  z-index: -1;
+  text-decoration: none;
+}
+
+.btn-primary:hover {
+  color: #fff;
+  border: 1px solid rgb(255, 255, 255);
+  box-shadow: #B74DDB;
+}
+
+.btn-primary:hover::before {
+  box-shadow: inset 0 0 0 10em rgb(255, 255, 255);
+}
+
+
+.btn-primary:hover {
+  background-color: #ffffff;
+  transition: all 0.5s;
+  box-shadow: 0px 0px 20px 0px rgb(255, 255, 255);
   transition: all 0.475s;
+  color:#A855F7;
 }
 
 /* Estilos para el botón secundario */
@@ -194,7 +259,6 @@ li .nav-link:hover {
 
 /* inicio prueba slider marcas*/
 
-
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
 
 
@@ -202,8 +266,6 @@ li .nav-link:hover {
 :root {
   --marquee-width: 80vw;
   --marquee-height: 20vh;
-  /* --marquee-elements: 12; */
-  /* defined with JavaScript */
   --marquee-elements-displayed: 5;
   --marquee-element-width: calc(var(--marquee-width) / var(--marquee-elements-displayed));
   --marquee-animation-duration: calc(var(--marquee-elements) * 3s);
@@ -307,7 +369,7 @@ li .nav-link:hover {
 
 
 .circle {
-
+  
   height: 200px;
   width: 200px;
   background-color: #A855F7;
@@ -342,7 +404,6 @@ li .nav-link:hover {
 }
 
 .sub-title {
-
   font-weight: 800;
   font-size: 45px;
   /** TEXT GRADIENT */
@@ -355,7 +416,6 @@ li .nav-link:hover {
 }
 
 .sub-title-2 {
-  text-align: left;
   font-weight: 800;
   font-size: 45px;
   /** TEXT GRADIENT */
@@ -429,6 +489,7 @@ hr {
 
 
 /*cards */
+
 .container-cards {
   display: flex;
   flex-direction: column;
@@ -525,11 +586,14 @@ hr {
 }
 
 .detalles {
-  height: 80vh;
-  background-image: url(assets/img/image-hero-background.png), url(assets/img/Frame.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: top;
+  background-image: url(assets/img/image-hero-background.png);
+  height: 100vh; 
+  max-height: 100vh; 
+  overflow: hidden; 
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center; 
+  position: relative;
 }
 
 .container-subtitle {
@@ -539,21 +603,9 @@ hr {
 }
 
 .container-grid {
-
   margin-top: 10vh;
   margin-bottom: 5vh;
 }
-.experience {
-  display: flex;
-  flex-direction: column;
-  background-size: cover;
-  background-position: center;
-  background: url(assets/img/background-cover-pronto.png) top center/cover;
-  justify-content: center;
-  align-items: center;
-  margin-top: 20px;
-}
-
 .container-tools {
   display: flex;
   flex-direction: column;
@@ -567,7 +619,10 @@ hr {
 }
 
 .tools {
-  text-align: left;
+  height: 100vh; 
+  max-height: 100vh; 
+  overflow: hidden; 
+  position: relative;
 }
 
 .tools li {
@@ -657,4 +712,101 @@ hr {
 }
 
 
-/*fii section contact*/
+/*fin section contact*/
+
+
+/*===========================
+  Section Title Five CSS
+===========================*/
+.section-title-five {
+  text-align: center;
+  max-width: 550px;
+  margin: auto;
+  margin-bottom: 50px;
+  position: relative;
+  z-index: 5;
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .section-title-five {
+    margin-bottom: 45px;
+  }
+}
+@media (max-width: 767px) {
+  .section-title-five {
+    margin-bottom: 35px;
+  }
+}
+.section-title-five h2 {
+  margin-bottom: 15px;
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .section-title-five h2 {
+    font-size: 2rem;
+    line-height: 2.8rem;
+  }
+}
+@media (max-width: 767px) {
+  .section-title-five h2 {
+    font-size: 1.5rem;
+    line-height: 1.9rem;
+  }
+}
+
+
+/*======================================
+    Brand CSS
+========================================*/
+
+.brand-area {
+  padding: 100px 0;
+  border-radius: 24px;
+  background-image: url(assets/img/glow-bottom.svg);
+  background-color: #e8e8e810;
+  border: 1px solid #475569;
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  margin-bottom: 50px;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .brand-area {
+    padding: 80px;
+  }
+}
+@media (max-width: 767px) {
+  .brand-area {
+    padding: 60px 0;
+  }
+}
+.brand-area .clients-logos {
+  text-align: center;
+  display: inline-block;
+  margin-top: 20px;
+}
+.brand-area .clients-logos .single-image {
+  display: inline-block;
+  margin: 13px 10px;
+  background-color: var(--white);
+  line-height: 100px;
+  padding: 8px 25px;
+  border-radius: 8px;
+  -webkit-transition: all 0.4s ease-out 0s;
+  -moz-transition: all 0.4s ease-out 0s;
+  -ms-transition: all 0.4s ease-out 0s;
+  -o-transition: all 0.4s ease-out 0s;
+  transition: all 0.4s ease-out 0s;
+  border: 1px solid #eee;
+}
+.brand-area .clients-logos .single-image:hover {
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.096);
+  -webkit-transform: translateY(-5px);
+  -moz-transform: translateY(-5px);
+  -ms-transform: translateY(-5px);
+  -o-transform: translateY(-5px);
+  transform: translateY(-5px);
+}
+.brand-area .clients-logos img {
+  max-width: 170px;
+  transition: all 0.4s ease-in-out;
+  cursor: pointer;
+}

@@ -46,20 +46,21 @@
 
 
 </head>
-<body>
+
+<body class="d-flex flex-column h-100">
+  <!-- Header-->
   <header id="header" class="row">
+    <!-- Navigation-->
     <nav class="navbar navbar-expand-lg nav">
       <div class="container-fluid px-5">
         <a class="navbar-brand" href="index.html"><img src="assets/favicon.svg" alt=""></a>
-
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
-          aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span
-            class="navbar-toggler-icon"></span>
-          </button>
-
-        <div class="collapse navbar-collapse" id="navbarResponsive">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-            <li class="nav-item"><a class="nav-link" href="#hero">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
             <li class="nav-item"><a class="nav-link" href="#about">Nosotros</a></li>
             <li class="nav-item"><a class="nav-link" href="#details">Servicios</a></li>
             <li class="nav-item"><a class="nav-link" href="#tools">Herramientas</a></li>
@@ -68,31 +69,28 @@
       </div>
     </nav>
   </header>
-  <main>
-    <section id="hero" data-parallax="scroll" data-image-src="assets/img/glow-bottom.svg">
-      <div class="container" data-aos="fade-up">
+  <main class="flex-shrink-0">
+    <!-- Botón de WhatsApp -->
+    <a href="https://wa.me/+351932902300" target="_blank" class="whatsapp-button">
+      <i class="bi bi-whatsapp whatsapp-icon"></i>
+    </a>
+    <section id="hero" data-parallax="scroll" data-image-src="assets/img/glow-bottom.svg" data-natural-width=3000
+      data-natural-height=2000>
+      <div class="px-4 py-5 my-5 text-center" data-aos="fade-up">
         <!--Titulos centrados-->
         <div class="text-center">
           <h1 class="section-heading item-title">Diseño y Desarrollo de Páginas Web</h1>
-          <p class="section-subheading item-parrafo">Ofrece tus servicios, Genera clientes y aumenta tus ganancias</p>
-        </div>    
-
-        <!--buton primario-->
-        <div class="container-btn-primary">
-          <div class="item-btn-primary">
-            <button class="button">
-              <span class="button-content">
-                Programa tu consulta gratis
-              </span>
-            </button>
+          <div class="col-lg-6 mx-auto">
+            <p class="section-subheading item-parrafo mb-4">Ofrece tus servicios, Genera clientes y aumenta tus
+              ganancias</p>
           </div>
         </div>
-        <!--fin boton primario-->
-      </div>
-       <!-- Botón de WhatsApp -->
-          <a href="https://wa.me/+351932902300" target="_blank" class="whatsapp-button">
-            <i class="bi bi-whatsapp whatsapp-icon"></i>
-        </a>
+        <!-- Primary button component -->
+        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+          <a href="#contact" class="btn-primary btn-lg px-4 gap-3">Programa tu consulta
+          </a>
+        </div>
+        <!-- Primary button component finish -->
     </section>
     <div class="marquee">
       <ul class="marquee-content">
@@ -124,14 +122,15 @@
           <div class="col-lg-7" data-aos="fade-up">
             <h2 class="sub-title">Ofrecemos soluciones a tu <span class="sub-title-span">medida</span></h2>
             <p class="mb-0 item-parrafo">
-              En <strong>Pronto.lab</strong> creamos páginas web personalizadas que combinan diseño atractivo, funcionalidad avanzada y optimización SEO. Diseñamos sitios web que reflejan tu marca y ayudan a mejorar tu visibilidad en línea. Trabajamos contigo para desarrollar una solución web que se adapte a tus necesidades y objetivos.
+              En <strong>Pronto.lab</strong> creamos páginas web personalizadas que combinan diseño atractivo,
+              funcionalidad avanzada y optimización SEO. Diseñamos sitios web que reflejan tu marca y ayudan a mejorar
+              tu visibilidad en línea. Trabajamos contigo para desarrollar una solución web que se adapte a tus
+              necesidades y objetivos.
             </p>
           </div>
         </div>
       </div>
       <!--servicios grid-->
-      
-
       <div class="container-grid container-cards px-5 my-5" id="servicios-grid">
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 py-5" data-aos="fade-up">
           <div class="col d-flex align-items-start">
@@ -170,127 +169,166 @@
       </div>
       <!--icon grid fin-->
     </section>
-    <!--fin servicios-->
     <!--inicio detalle servicios-->
-    <section id="details" class="detalles">
+    <section id="details" class="detalles" data-parallax="scroll" data-image-src="assets/img/glow-bottom-top.svg"
+      data-natural-width=3000 data-natural-height=2000>
       <div class="container">
-<!--Titulos centrados-->
+        <!--titulos centrados-->
+        <div class="text-center container-title">
+          <h2 class="item-title" data-aos="zoom-out-down">Explora Nuestro Universo</h2>
+          <p class="item-parrafo" data-aos="zoom-out-down">Servicios de Diseño y Desarrollo Web</p>
+        </div>
 
-<!--titulos centrados-->
-<div class="text-center container-title">
-  <h2 class="item-title"  data-aos="zoom-out-down">Explora Nuestro Universo</h2>
-  <p class="item-parrafo"  data-aos="zoom-out-down">Servicios de Diseño y Desarrollo Web</p>
-</div>
-
-      <!--detalle grid-->
-      <div class="container-fluid container-grid ">
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4">
-          <div class="col" data-aos="fade-up">
-            <div class="container shadow-sm">
-
-              <div class="box card-detalle">
-                <p class="fw-bold mb-0 fs-5 title-card">Diseño de sitios web personalizados</p>
-                <div class="container-link">
-                  <a class="link-card" href="#">Saber más
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#A855F7"
-                      class="bi bi-arrow-right-short" viewBox="0 0 16 16">
-                      <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 
+        <!--detalle grid-->
+        <div class="container-fluid container-grid ">
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 g-4">
+            <div class="col" data-aos="fade-up">
+              <div class="container">
+                <div class="box card-detalle">
+                  <p class="fw-bold mb-0 fs-5 title-card">Diseño de sitios web personalizados</p>
+                  <div class="container-link">
+                    <a class="link-card" href="#">Saber más
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#A855F7"
+                        class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 
                             1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8" />
-                    </svg></a>
+                      </svg></a>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="col" data-aos="fade-up">
-            <div class="container shadow-sm">
-
-              <div class="box card-detalle">
-                <p class="fw-bold mb-0 fs-5 title-card">Desarrollo de landing pages</p>
-                <div class="container-link">
-                  <a class="link-card" href="#">Saber más
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#A855F7"
-                      class="bi bi-arrow-right-short" viewBox="0 0 16 16">
-                      <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 
+            <div class="col" data-aos="fade-up">
+              <div class="container">
+                <div class="box card-detalle">
+                  <p class="fw-bold mb-0 fs-5 title-card">Desarrollo de Landing pages </p>
+                  <div class="container-link">
+                    <a class="link-card" href="#">Saber más
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#A855F7"
+                        class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 
                             1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8" />
-                    </svg></a>
+                      </svg></a>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="col" data-aos="fade-up">
-            <div class="container shadow-sm">
-
-              <div class="box card-detalle">
-                <p class="fw-bold mb-0 fs-5 title-card">Diseño de interfaces de usuario (UI)</p>
-                <div class="container-link">
-                  <a class="link-card" href="#">Saber más
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#A855F7"
-                      class="bi bi-arrow-right-short" viewBox="0 0 16 16">
-                      <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 
+            <div class="col" data-aos="fade-up">
+              <div class="container">
+                <div class="box card-detalle">
+                  <p class="fw-bold mb-0 fs-5 title-card">Diseño de interfaces de usuario (UI)</p>
+                  <div class="container-link">
+                    <a class="link-card" href="#">Saber más
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#A855F7"
+                        class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 
                             1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8" />
-                    </svg></a>
+                      </svg></a>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
 
-          <div class="col" data-aos="fade-up">
-            <div class="container shadow-sm">
-
-              <div class="box card-detalle">
-                <p class="fw-bold mb-0 fs-5 title-card">Experiencia de usuario (UX).</p>
-                <div class="container-link">
-                  <a class="link-card" href="#">Saber más
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#A855F7"
-                      class="bi bi-arrow-right-short" viewBox="0 0 16 16">
-                      <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 
+            <div class="col" data-aos="fade-up">
+              <div class="container">
+                <div class="box card-detalle">
+                  <p class="fw-bold mb-0 fs-5 title-card">Experiencia de usuario (UX) </p>
+                  <div class="container-link">
+                    <a class="link-card" href="#">Saber más
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#A855F7"
+                        class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 
                             1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8" />
-                    </svg></a>
+                      </svg></a>
+                  </div>
                 </div>
               </div>
-            </div>
-            <!--fin detalle grid-->
+              <!--fin detalle grid-->
     </section>
     <!--fin detalle servicios-->
-    <section class="experience" id="tools">
-      <!--prueba section-->
-      <div class="container-fluid px-5 my-5">
-        <div class="row gx-5 align-items-start">
-          <div class="col-lg-6 order-first order-lg-last"></div>
-          <div class="col-lg-6">
-            <h2 class="sub-title-2 lh-1 mb-3" data-aos="zoom-out-right">Tecnología de Otro <span
-                class="sub-title-span" data-aos="zoom-out-right">Mundo</span></h2>
-            <p class="lead fw-normal mb-1 item-parrafo" data-aos="zoom-out-right">En <strong>Pronto.lab</strong> utilizamos una variedad de herramientas y
-              tecnologías de vanguardia para garantizar que cada página web que desarrollamos sea funcional, segura y
-              visualmente impactante. Nuestro equipo selecciona cuidadosamente cada herramienta para adaptarse a las
-              necesidades específicas de tu proyecto, asegurando un desarrollo ágil y eficiente que cumpla con los más
-              altos estándares de calidad.</p>
-            <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-              <div class="container-btn-primary">
-                <div class="item-btn-secundary">
-                  <!--Boton secundario-->
-                  <button class="button-secundario">
-                    <span class="button-content">
-                      Pruebalo tu mismo
-                    </span>
-                  </button>
-                </div>
+    <section id="tools">
+      <div class="container px-12">
+        <div class="row gx-5 align-items-center justify-content-center">
+          <div class="col-lg-9 col-xl-7 col-xxl-6">
+            <div class="my-5 text-center text-xl-start">
+              <h2 class="sub-title-2 lh-1 mb-3" data-aos="zoom-out-right">Tecnología de Otro <span
+                  class="sub-title-span" data-aos="zoom-out-right">Mundo</span></h2>
+              <p class="lead fw-normal mb-1 item-parrafo" data-aos="zoom-out-right">En <strong>Pronto.lab</strong>
+                empleamos herramientas y tecnología avanzada para crear páginas web funcionales, seguras y visualmente atractivas. Nuestro equipo elige cada recurso según las necesidades de tu proyecto, garantizando un desarrollo ágil, eficiente y de alta calidad.</p>
+              <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-start">
+                <!-- Primary button component -->
+                 <div class="container-btn">
+                  <a href="#contact" class="btn-primary btn-lg px-4 gap-3">Empecemos
+                  </a>
+                 </div>
+                <!-- Primary button component finish -->
               </div>
-
+            </div>
+          </div>
+          <div class="col-xl-5 col-xxl-5 d-none d-xl-block">
+            <img class="img-fluid" src="assets/img/background-cover-pronto.png" alt="logo pronto" />
+          </div>
+        </div>
+      </div>
+    </section>
+     <div class="container">
+      <!-- Start Brand Area -->
+  <div id="clients" class="brand-area section">
+    <!--======  Start Section Title Five ======-->
+    <div class="section-title-five">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="content">
+              <h4 class="sub-title">En <span class="sub-title-span">Vanguardia</span></h4>
+              <p class="item-parrafo" data-aos="fade-up">
+                Amplia gama de herramientas, amplia gama de soluciones.</p>
+            </div>
+          </div>
+        </div>
+        <!-- row -->
+      </div>
+      <!-- container -->
+    </div>
+    <!--======  End Section Title Five ======-->
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 offset-lg-2 col-12">
+          <div class="clients-logos">
+            <div class="single-image">
+              <img src="assets/img/client-logo/ayroui.svg" alt="Brand Logo Images" />
+            </div>
+            <div class="single-image">
+              <img src="assets/img/client-logo/ecomhtml.svg" alt="Brand Logo Images" />
+            </div>
+            <div class="single-image">
+              <img src="assets/img/client-logo/graygrids.svg" alt="Brand Logo Images" />
+            </div>
+            <div class="single-image">
+              <img src="assets/img/client-logo/lineicons.svg" alt="Brand Logo Images" />
+            </div>
+            <div class="single-image">
+              <img src="assets/img/client-logo/tailwindtemplates.svg" alt="Brand Logo Images" />
+            </div>
+            <div class="single-image">
+              <img src="assets/img/client-logo/uideck.svg" alt="Brand Logo Images" />
             </div>
           </div>
         </div>
       </div>
-      <!--prueba section-->
-    </section>
+    </div>
+  </div>
+  <!-- End Brand Area -->
+     </div>
   </main>
   <!-- Contact-->
   <section class="page-section" id="contact">
     <div class="container">
       <!--titulos centrados-->
       <div class="text-center container-title">
-        <h2 class="section-heading item-title"  data-aos="fade-up">Explora Nuevas <span class="sub-title-span"> Oportunidades</span></h2>
-        <p class="section-subheading item-parrafo"  data-aos="fade-up">Ponte en contacto con nosotros y empecemos a crear juntos.</p>
+        <h2 class="section-heading item-title" data-aos="fade-up">Explora Nuevas <span class="sub-title-span">
+            Oportunidades</span></h2>
+        <p class="section-subheading item-parrafo" data-aos="fade-up">Ponte en contacto con nosotros y empecemos a crear
+          juntos.</p>
       </div>
       <!-- * * * * * * * * * * * * * * *-->
       <!-- * * SB Forms Contact Form * *-->
@@ -299,38 +337,36 @@
       <!-- To make this form functional, sign up at-->
       <!-- https://startbootstrap.com/solution/contact-forms-->
       <!-- to get an API token!-->
-    
-    <!--formulario prueba-->
-    <div class="container">
-      <div class="login-box">
-        <form>
-          <div class="user-box">
-            <input type="text" id="name" required="">
-            <label>Tu Nombre</label>
-          </div>
-          <div class="user-box">
-            <input type="email" id="email" required="">
-            <label>Tu Email</label>
-          </div>
-          <div class="user-box">
-            <input type="tel" id="phone" required="">
-            <label>Tu Telefono</label>
-          </div>
-        </form>
-        <div class="container-btn-primary">
-          <button class="button-secundario">
-            <span class="button-content">
-              Enviar Mensaje
-            </span>
-          </button>
-        </div>
-        
-      </div>
-    </div>
-    <!--fin formulario prueba-->
 
+      <!--formulario prueba-->
+      <div class="container">
+        <div class="login-box">
+          <form>
+            <div class="user-box">
+              <input type="text" id="name" required="">
+              <label>Tu Nombre</label>
+            </div>
+            <div class="user-box">
+              <input type="email" id="email" required="">
+              <label>Tu Email</label>
+            </div>
+            <div class="user-box">
+              <input type="tel" id="phone" required="">
+              <label>Tu Telefono</label>
+            </div>
+          </form>
+          <div class="container-btn">
+            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+              <a href="#contact" class="btn-primary btn-lg px-4 gap-3">Enviar mensaje
+              </a>
+            </div>
+          </div>
+          
+          </div>
+          </div>
+      <!--fin formulario prueba-->  
   </section>
-   <!--footer-->
+  <!--footer-->
   <div class="container">
     <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
       <p class="col-md-4 mb-0 item-parrafo">&copy; 2024 Company, Inc</p>
