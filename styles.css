@@ -667,7 +667,7 @@ hr {
   position: relative;
 }
 
-.login-box .user-box input {
+.login-box .user-box input  {
   width: 100%;
   padding: 10px 0;
   font-size: 16px;
@@ -710,7 +710,6 @@ hr {
   margin-top: 40px;
   letter-spacing: 4px
 }
-
 
 /*fin section contact*/
 
