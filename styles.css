@@ -807,3 +807,33 @@ hr {
   transition: all 0.4s ease-in-out;
   cursor: pointer;
 }
+
+
+.navbar-brand, .navbar-nav .nav-link {
+  color: #ffffff !important;
+}
+
+.header {
+  background-color: #00000000;
+  color: white;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.content-box {
+  background-color: #ffffff;
+  border: 1px solid #dee2e6;
+  border-radius: 0.5rem;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 2rem 0;
+  overflow-y: auto;
+  max-height: 70vh;
+}
+footer {
+
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 2rem;
+}
